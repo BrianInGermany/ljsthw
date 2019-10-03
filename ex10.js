@@ -11,10 +11,15 @@ console.log(`The file named ${file_to_open} contains:`);
 console.log(file_contents.toString());
 
 let name = readline.question("name an additional text file to open: \n");
+const validatePath = (name) => {
+
+}
 if (fs.existsSync(name)) {
-    let file_two_contents = fs.readFileSync(name);
     console.log(`The file named ${name} contains:`);
-    console.log(file_two_contents.toString());
+    fs.readFile(name, (err, data) => {
+        console.log(data.toString());
+    })
+   
 }
 else {
     console.log("No such file!")
