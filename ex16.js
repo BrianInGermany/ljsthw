@@ -1,7 +1,9 @@
 let count = 5;
-
+// set variable
 while (count > 0) {
+    //format string
     console.log(`count down ${count}`);
+    //subtract one from variable
     count--;
 }
 
